@@ -8,7 +8,6 @@ class Utils {
   }
 
   static String getCoinAmount(double amount, String symbol) {
-    // ignore: prefer_interpolation_to_compose_strings
     return (amount.toString().length > 8
             ? amount.toStringAsFixed(8)
             : amount.toString()) +
