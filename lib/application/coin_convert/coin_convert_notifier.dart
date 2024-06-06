@@ -51,8 +51,6 @@ class CoinConvertNotifier extends StateNotifier<CoinConvertState> {
     ValidationError? validation;
     ConfirmModel? confirm;
 
-    // Valido que la cantidad a convertir para saber si paso o no a la pantalla
-    // de confirmacion
     if (amount > 0 && amount <= state.from!.dollars!) {
       final amount = double.parse(state.amount);
 
@@ -95,8 +93,6 @@ class CoinConvertNotifier extends StateNotifier<CoinConvertState> {
       amount: newAmountOfFrom,
       dollars: newDollarsOfFrom,
     );
-
-    // Actualizo los valores de la moneda que recibe
     final newDollarsOfTo = state.to!.dollars! + amount;
     final newAmountOfTo = newDollarsOfTo / state.to!.currentPrice;
 
