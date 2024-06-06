@@ -35,7 +35,6 @@ class CoinListNotifier extends StateNotifier<CoinListState> {
     final actualCoins = (state as Loaded).coins;
     var total = (state as Loaded).totalDollars;
 
-    // Actualizo los valores actuales de la lista
     for (var coin in coins) {
       var index = actualCoins.indexWhere((item) => coin.symbol == item.symbol);
       if (index != -1) {
