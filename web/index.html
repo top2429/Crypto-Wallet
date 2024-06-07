@@ -31,7 +31,6 @@
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        // potentially different versions.
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {
